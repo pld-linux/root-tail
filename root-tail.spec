@@ -6,10 +6,13 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
 URL:		http://goof.com/pcg/marc/root-tail.html
-BuildPreReq:	XFree86-devel
+BuildRequires:	XFree86-devel
 Requires:	XFree86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,8 +26,9 @@ easier than making a new rxvt pixmap each time I changed my background
 to simulate that transparent effect.
 
 %description -l pl
-Narzêdzie umo¿liwiaj±ce wy¶wietlanie danego pliku jako przezroczyste
-t³o w X11.
+Narzêdzie umo¿liwiaj±ce wy¶wietlanie danego pliku w g³ównym oknie X11
+z przezroczystym t³em. Powsta³o po to, ¿eby nie zmieniaæ t³a rxvt przy
+ka¿dej zmianie t³a desktopu.
 
 %prep
 %setup -q
@@ -34,15 +38,15 @@ xmkmf -a
 %{__make} CXXDEBUGFLAGS="%{rpmcflags}"
 
 %install
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
-install -D root-tail %{buildroot}%{_bindir}/root-tail
-install -D root-tail.man %{buildroot}%{_mandir}/man1/root-tail.1
+install -D root-tail $RPM_BUILD_ROOT%{_bindir}/root-tail
+install -D root-tail.man $RPM_BUILD_ROOT%{_mandir}/man1/root-tail.1
 
 gzip -9nf README Changes
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
