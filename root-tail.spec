@@ -12,7 +12,6 @@ BuildRequires:	XFree86-devel
 Requires:	XFree86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Displays a given file anywhere on your X11 root window with a
 transparent background. It was made because I'm very lazy and this was
@@ -36,7 +35,6 @@ rm -rf $RPM_BUILD_ROOT
 
 install -D root-tail $RPM_BUILD_ROOT%{_bindir}/root-tail
 install -D root-tail.man $RPM_BUILD_ROOT%{_mandir}/man1/root-tail.1
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
