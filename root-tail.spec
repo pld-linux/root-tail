@@ -12,6 +12,9 @@ BuildRequires:	XFree86-devel
 Requires:	XFree86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
+
 %description
 Displays a given file anywhere on your X11 root window with a
 transparent background. It was made because I'm very lazy and this was
