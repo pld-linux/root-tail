@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
+# Source0-md5:	92c217c21c4388413b8fb3e0d9ffb6ac
 URL:		http://goof.com/pcg/marc/root-tail.html
 BuildRequires:	XFree86-devel
 Requires:	XFree86
