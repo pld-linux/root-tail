@@ -38,13 +38,12 @@ rm -rf $RPM_BUILD_ROOT
 install -D root-tail $RPM_BUILD_ROOT%{_bindir}/root-tail
 install -D root-tail.man $RPM_BUILD_ROOT%{_mandir}/man1/root-tail.1
 
-gzip -9nf README Changes
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README Changes
 %attr(755,root,root) %{_bindir}/root-tail
 %{_mandir}/man1/root-tail.1.*
