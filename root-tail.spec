@@ -1,12 +1,12 @@
 Summary:	Displays (tails) a given file anywhere on your X root window
 Summary(pl):	Wy¶wietla (tail) dany plik jako t³o w Xach
 Name:		root-tail
-Version:	1.1
+Version:	1.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
-# Source0-md5:	adb925c2781892bb5dcbdf9d5e579032
+# Source0-md5:	5a4b3c4c7ab3bed1f4575e9688aac5de
 URL:		http://goof.com/pcg/marc/root-tail.html
 BuildRequires:	XFree86-devel
 Requires:	XFree86
