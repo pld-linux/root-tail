@@ -1,7 +1,7 @@
 Summary:	Displays (tails) a given file anywhere on your X root window
 Summary(pl):	Wy¶wietla (tail) dany plik jako t³o w Xach
 Name:		root-tail
-Version:	0.0.10
+Version:	0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
