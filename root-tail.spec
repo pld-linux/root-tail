@@ -9,9 +9,9 @@ Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
 URL:		http://goof.com/pcg/marc/root-tail.html
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	XFree86
 BuildPreReq:	XFree86-devel
+Requires:	XFree86
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
