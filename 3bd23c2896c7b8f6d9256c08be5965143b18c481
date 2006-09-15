@@ -1,0 +1,5 @@
+- spec adapterized,
+- make spaec %{debug} ready and added using %{rpmcflags},
+- added gzipping %doc and do not gzipping directly man pages (rpm makes this
+  automatically),
+- some simplifications and cosmetics.
