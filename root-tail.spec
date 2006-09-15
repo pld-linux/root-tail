@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README Changes
 %attr(755,root,root) %{_bindir}/root-tail
-%{_mandir}/man1/root-tail.1.*
+%{_mandir}/man1/root-tail.1*
