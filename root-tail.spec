@@ -1,5 +1,5 @@
 Summary:	Displays (tails) a given file anywhere on your X root window
-Summary(pl):	Wy∂wietla (tail) dany plik jako t≥o w Xach
+Summary(pl.UTF-8):   Wy≈õwietla (tail) dany plik jako t≈Ço w Xach
 Name:		root-tail
 Version:	1.2
 Release:	1
@@ -18,10 +18,10 @@ transparent background. It was made because I'm very lazy and this was
 easier than making a new rxvt pixmap each time I changed my background
 to simulate that transparent effect.
 
-%description -l pl
-NarzÍdzie umoøliwiaj±ce wy∂wietlanie danego pliku w g≥Ûwnym oknie X11
-z przezroczystym t≥em. Powsta≥o po to, øeby nie zmieniaÊ t≥a rxvt przy
-kaødej zmianie t≥a desktopu.
+%description -l pl.UTF-8
+Narzƒôdzie umo≈ºliwiajƒÖce wy≈õwietlanie danego pliku w g≈Ç√≥wnym oknie X11
+z przezroczystym t≈Çem. Powsta≈Ço po to, ≈ºeby nie zmieniaƒá t≈Ça rxvt przy
+ka≈ºdej zmianie t≈Ça desktopu.
 
 %prep
 %setup -q
