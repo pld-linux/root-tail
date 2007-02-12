@@ -1,5 +1,5 @@
 Summary:	Displays (tails) a given file anywhere on your X root window
-Summary(pl.UTF-8):   Wyświetla (tail) dany plik jako tło w Xach
+Summary(pl.UTF-8):	Wyświetla (tail) dany plik jako tło w Xach
 Name:		root-tail
 Version:	1.2
 Release:	1
