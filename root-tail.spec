@@ -8,8 +8,11 @@ Group:		X11/Applications
 Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
 # Source0-md5:	5a4b3c4c7ab3bed1f4575e9688aac5de
 URL:		http://goof.com/pcg/marc/root-tail.html
-BuildRequires:	XFree86-devel
-Requires:	XFree86
+BuildRequires:	rman
+BuildRequires:	xorg-cf-files
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-util-gccmakedep
+BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +31,8 @@ każdej zmianie tła desktopu.
 
 %build
 xmkmf -a
-%{__make} CXXDEBUGFLAGS="%{rpmcflags}"
+%{__make} \
+	CXXDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
