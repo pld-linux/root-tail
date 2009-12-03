@@ -11,6 +11,7 @@ URL:		http://goof.com/pcg/marc/root-tail.html
 BuildRequires:	rman
 BuildRequires:	xorg-cf-files
 BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-util-gccmakedep
 BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
