@@ -1,19 +1,15 @@
 Summary:	Displays (tails) a given file anywhere on your X root window
 Summary(pl.UTF-8):	Wyświetla (tail) dany plik jako tło w Xach
 Name:		root-tail
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://goof.com/pcg/marc/data/%{name}-%{version}.tar.gz
-# Source0-md5:	5a4b3c4c7ab3bed1f4575e9688aac5de
-URL:		http://goof.com/pcg/marc/root-tail.html
-BuildRequires:	rman
-BuildRequires:	xorg-cf-files
+Source0:	http://dist.schmorp.de/root-tail/%{name}-%{version}.tar.gz
+# Source0-md5:	76681b2823604af8d9ea56695d774933
+URL:		http://software.schmorp.de/pkg/root-tail.html
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-util-gccmakedep
-BuildRequires:	xorg-util-imake
+BuildRequires:	xorg-lib-libXfixes-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,21 +21,21 @@ to simulate that transparent effect.
 %description -l pl.UTF-8
 Narzędzie umożliwiające wyświetlanie danego pliku w głównym oknie X11
 z przezroczystym tłem. Powstało po to, żeby nie zmieniać tła rxvt przy
-każdej zmianie tła desktopu.
+każdej zmianie tła pulpitu.
 
 %prep
 %setup -q
 
 %build
-xmkmf -a
 %{__make} \
-	CXXDEBUGFLAGS="%{rpmcflags}"
+	CC="%{__cc}" \
+	COPTS="%{rpmcflags} %{rpmcppflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D root-tail $RPM_BUILD_ROOT%{_bindir}/root-tail
-install -D root-tail.man $RPM_BUILD_ROOT%{_mandir}/man1/root-tail.1
+install -Dp root-tail $RPM_BUILD_ROOT%{_bindir}/root-tail
+install -Dp root-tail.man $RPM_BUILD_ROOT%{_mandir}/man1/root-tail.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
